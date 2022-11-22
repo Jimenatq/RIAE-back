@@ -11,10 +11,13 @@ namespace back_riae.Models
 
         public int Tipo { get; set; }
 
+        [Required]
         public int Subtipo { get; set; }
 
+        [Required]
         public int Codigo { get; set; }
 
+        [Required]
         public int Clasificador { get; set; }
 
         [Required]
@@ -22,8 +25,13 @@ namespace back_riae.Models
         public string Concepto { get; set; }
 
         [Required]
+        public int ImporteClasificador { get; set; }
+
+        [Required]
+        public int ImporteTotal { get; set; }
+
+        [Required]
         public bool Glosa { get; set; }
 
-        public int ImporteT { get; set; }
     }
 }

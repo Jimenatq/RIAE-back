@@ -5,18 +5,15 @@ namespace back_riae.Models
 {
     public class Glosa
     {
-
         public int Pliego { get; set; }
 
         public int Subtipo { get; set; }
 
+        public int n_cheque { get; set; }
+
+        public int monto_cheque { get; set; }
 
         [Required]
-        [Column(TypeName = "varchar(100)")]
-        public string NombreEmpresa { get; set; }
-
-        [Required]
-        [Column(TypeName = "varchar(100)")]
-        public string NotaInformativa { get; set; }
+        public string texto_glosa { get; set; }
     }
 }
