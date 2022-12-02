@@ -12,18 +12,12 @@ namespace back_riae.Controllers
 
     public class DefaultController : ControllerBase
     {
-        public DefaultController(ILogger<WeatherForecastController> logger)
-        {
             //GET
             [HttpGet]
 
             public string Get()
             {
-                return "Aplicacion corriendo..."
-            }
-            
-        }
-
-        
+            return "Aplicacion corriendo...";
+            } 
     }
 }

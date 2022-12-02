@@ -7,7 +7,7 @@ namespace back_riae.Models
     {
         public int Id { get; set; }
 
-        public int Pliego { get; set; }
+        public int n_recibo { get; set; }
 
         public int Tipo { get; set; }
 
@@ -21,7 +21,6 @@ namespace back_riae.Models
         public int Clasificador { get; set; }
 
         [Required]
-        [Column(TypeName = "varchar(100)")]
         public string Concepto { get; set; }
 
         [Required]
