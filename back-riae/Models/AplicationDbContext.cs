@@ -7,6 +7,10 @@ namespace back_riae.Models
         public AplicationDbContext(DbContextOptions<AplicationDbContext> options) : base(options)
         {
         }
-        public DbSet<tipos_registros> tipos_Registros { get; set; }
+        public DbSet<tipos_ingresos> tipos_Registros { get; set; }
+        //public DbSet<registro_ipropios> registro_Ipropios { get; set; }
+        public DbSet<subtipo_ingresos> subtipo_Ingresos { get; set; }
+        //public DbSet<boleta_clasificadores_ip> boleta_Clasificadores { get; set; }
+        
     }
 }

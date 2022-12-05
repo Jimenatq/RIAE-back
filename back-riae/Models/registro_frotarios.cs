@@ -4,32 +4,21 @@ namespace back_riae.Models
 {
     public class registro_frotarios
     {
-            public int Id { get; set; }
+            public int id_registro_frotatorios { get; set; }
+
+            public int id_tipo_registro { get; set; }
 
             public int n_recibo { get; set; }
 
-            public int Tipo { get; set; }
+            public int id_subtipo { get; set; }
 
-            [Required]
-            public int Subtipo { get; set; }
+            public int n_boleta_clasificador { get; set; }
 
-            [Required]
-            public int Codigo { get; set; }
+            public int importe_total_boleta { get; set; }
 
-            [Required]
-            public int Clasificador { get; set; }
+            public int igv { get; set; }
 
-            [Required]
-            public string Concepto { get; set; }
-
-            [Required]
-            public int ImporteClasificador { get; set; }
-
-            [Required]
-            public int ImporteTotal { get; set; }
-
-            [Required]
-            public bool Glosa { get; set; }
+            public int monto_igv { get; set; }
 
     }
 }

@@ -3,34 +3,25 @@ using System.ComponentModel.DataAnnotations;
 
 namespace back_riae.Models
 {
-    public class Ingreso
+    public class registro_ipropios
     {
-        public int Id { get; set; }
+        public int id_registro_ipropios { get; set; }
+
+        public int id_tipo_registro { get; set; }
 
         public int n_recibo { get; set; }
 
-        public int Tipo { get; set; }
+        public int id_subtipo { get; set; }
 
-        [Required]
-        public int Subtipo { get; set; }
+        public int n_boleta_clasificadores { get; set; }
 
-        [Required]
-        public int Codigo { get; set; }
+        public int importe_total_boleta { get; set; }
 
-        [Required]
-        public int Clasificador { get; set; }
+        public int n_cheque { get; set; }
 
-        [Required]
-        public string Concepto { get; set; }
+        public int monto_cheque { get; set; }
 
-        [Required]
-        public int ImporteClasificador { get; set; }
-
-        [Required]
-        public int ImporteTotal { get; set; }
-
-        [Required]
-        public bool Glosa { get; set; }
+        public string texto_glosa { get; set; }
 
     }
 }
