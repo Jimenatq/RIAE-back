@@ -11,7 +11,7 @@ using back_riae.Models;
 namespace backriae.Migrations
 {
     [DbContext(typeof(AplicationDbContext))]
-    [Migration("20221202160737_InitialMigration")]
+    [Migration("20221205010321_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />

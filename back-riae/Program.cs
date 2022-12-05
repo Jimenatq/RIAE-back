@@ -1,5 +1,4 @@
 using back_riae.Models;
-using back_riae.Models.Repository;
 using FluentAssertions.Common;
 using Microsoft.EntityFrameworkCore;
 
@@ -72,4 +71,3 @@ app.MapControllers();
 
 app.Run();
 
-builder.Services.AddTransient<ItipoRepository, tipoRepository>();
