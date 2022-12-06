@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace back_riae.Models
@@ -7,10 +8,11 @@ namespace back_riae.Models
     public class subtipo_ingresos
     {
         public int id_subtipo { get; set; }
-        public int tipo_registro { get; set; }
-        [ForeignKey(nameof(tipo_registro))]
-        public tipos_ingresos tipos_ingresos { get; set; } 
+        public int id_tipo_registro { get; set; }
         public int subtipo_registro { get; set; }
         public string nombre_subtipo { get; set; }
+
+        [ForeignKey(nameof(id_tipo_registro))]
+        public tipos_ingresos tipos_ingresos { get; set; }
     }
 }

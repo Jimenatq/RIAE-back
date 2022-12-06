@@ -2,6 +2,7 @@ using back_riae.Models;
 using FluentAssertions.Common;
 using Microsoft.EntityFrameworkCore;
 
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 IConfiguration configuration = new ConfigurationBuilder()
 
@@ -11,6 +12,16 @@ IConfiguration configuration = new ConfigurationBuilder()
 
 
 var builder = WebApplication.CreateBuilder(args);
+//CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy =>
+                      {
+                          policy.WithOrigins("http://localhost:8080",
+                                              "http://www.contoso.com");
+                      });
+});
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -57,17 +68,7 @@ app.UseRouting();
 app.UseAuthorization();
 app.MapRazorPages();
 app.MapControllers();
-
-//app.MapControllerRoute(
- //   name: "default",
-
- //  pattern: "{controller=Home}/{action=Index}/{id?}");
-
-//app.MapControllerRoute(
-
-//   name: "MyArea",
-
- //  pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+app.UseCors(MyAllowSpecificOrigins);
 
 app.Run();
 

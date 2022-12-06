@@ -8,7 +8,6 @@ namespace back_riae.Models
     {
         public int id_tipo_registro { get; set; }
         
-        public ICollection<subtipo_ingresos> subtipo_ingresoos { get; set; }
         public int tipo_registro { get; set; }
         public string nombre_registro { get; set; }
     }
