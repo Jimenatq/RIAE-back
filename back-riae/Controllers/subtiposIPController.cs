@@ -7,10 +7,10 @@ namespace back_riae.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class subtiposController : Controller
+    public class subtiposIPController : Controller
     {
         private readonly AplicationDbContext _context;
-        public subtiposController(AplicationDbContext context)
+        public subtiposIPController(AplicationDbContext context)
         {
             _context = context;
         }
@@ -22,7 +22,7 @@ namespace back_riae.Controllers
         {
             try
             {
-                var listSubtipos = await _context.subtipo_Ingresos.ToListAsync();
+                var listSubtipos = await _context.subtipo_Ingresos_IP.ToListAsync();
                 return Ok(listSubtipos);
             }
             catch (Exception ex)
@@ -33,13 +33,13 @@ namespace back_riae.Controllers
 
         //POST
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] subtipo_ingresos subtipo_Ingresos)
+        public async Task<IActionResult> Post([FromBody] subtipo_ingresos_ip subtipo_Ingresos_IP)
         {
             try
             {
-                _context.subtipo_Ingresos.Add(subtipo_Ingresos);
+                _context.subtipo_Ingresos_IP.Add(subtipo_Ingresos_IP);
                 await _context.SaveChangesAsync();
-                return Ok(new { message = "El nuevo subtipo fue agregado con exito" });
+                return Ok(new { message = "El nuevo subtipo IP fue agregado con exito" });
             }
             catch (Exception ex)
             {

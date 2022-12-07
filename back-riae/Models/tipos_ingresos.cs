@@ -7,7 +7,6 @@ namespace back_riae.Models
     public class tipos_ingresos
     {
         public int id_tipo_registro { get; set; }
-        
         public int tipo_registro { get; set; }
         public string nombre_registro { get; set; }
     }
